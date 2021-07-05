@@ -1,0 +1,28 @@
+improvements to endpoint
+query (company, city, country, name)
+pagination
+sort (+ / -) lat long
+
+
+Endpoit to get all networks
+// app.get("/networks", async (req, res) => {
+//   try {
+//     const response = await axios.get("http://api.citybik.es/v2/networks");
+//     res.send(response.data);
+//   } catch (error) {
+//     const { statusCode } = error;
+//     res.status(statusCode).send(error);
+//   }
+// });
+
+Endpoit to get city based on url
+app.get("/networks/:city", async (req, res) => {
+  console.log("networks/:city");
+  console.log(req.params);
+});
+
+Overall improvements
+- tests
+- caching
+- versioning
+- linting
